@@ -10,11 +10,19 @@ To make things simple, they assume that an increase in a company’s website pag
 On the other hand, a decrease in pageviews tells us a loss in interest, and the stock price is likely to decrease.
 
 Steps to write a DAG File for this Orchestration Task:
+
 i Import the necessary libraries and create an instance od DAG Class.
+
 ii. Write a python function to download the .gz file 
+
 iii. Create a task using PythonOperator to call this function
+
 iii. Use a BashOperator to extract the .gz file
+
 iv. Fetch data and insert into the database
+
 v. Write an SQL file to insert the data into the database
+
 vi. PostgresOperator to load data into the PostgreSQL database
+
 vii. Create Task dependencies
